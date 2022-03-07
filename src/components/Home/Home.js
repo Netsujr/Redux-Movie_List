@@ -12,7 +12,7 @@ const Home = () => {
 
   const fetchMovies = async () => {
     const showSearch = 'rick and morty';
-    const response = await movieAPI.get(`/shows?q=${showSearch}`);
+    const response = await movieAPI.get(`/search/shows?q=${showSearch}`);
     const data = await response.data;
     console.log(data);
   };
