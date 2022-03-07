@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://api.tvmaze.com',
+  baseURL: 'https://www.omdbapi.com',
 });

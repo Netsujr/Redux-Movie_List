@@ -1,22 +1,30 @@
 import React, { useEffect } from 'react';
 import './Home.scss';
 import MovieList from '../MovieList/MovieList';
-import { searchShows } from '../../common/api/search';
 import { useDispatch } from 'react-redux';
-import addShow from '../../features/shows/ShowSlice';
-
+import addMovies from '../../features/movies/MovieSlice';
+import movieAPI from '../../common/api/movieAPI';
 
 const Home = () => {
   const dispatch = useDispatch();
+  const movieSearch = 'Harry';
 
   useEffect(() => {
-    searchShows();
-    dispatch(addShow.data);
+    const fetchMovies = async () => {
+      const response = await movieAPI
+        .get(`?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&s=${movieSearch}&type=movie`)
+        .catch(error => {
+          console.log(error);
+        });
+        console.log(response);
+      dispatch(addMovies(response.data));
+    };
+    fetchMovies();
   }, []);
 
   return (
     <>
-      <div className='banne'>Banner goes here</div>
+      <div className='banner'>Banner goes here</div>
       <MovieList />
     </>
   );
