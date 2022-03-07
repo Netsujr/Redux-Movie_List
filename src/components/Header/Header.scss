@@ -1,17 +1,25 @@
+@import "../../common/colors";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #e6e6e6;
+  background-color: $primary-color-light;
+  border-bottom: 1px solid $secondary-color;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $font-secondary;
 }
 
 .user-image img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: $primary-color-light;
   margin-right: 10px;
 }
 
