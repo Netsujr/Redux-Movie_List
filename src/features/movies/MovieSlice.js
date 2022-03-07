@@ -8,9 +8,9 @@ const movieSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    addMovies: (state, { payload }) => {
+    addMovies: (state, { type, payload }) => {
       state.movies = payload;
-    },
+    }
   },
 });
 

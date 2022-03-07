@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Home.scss';
 import MovieList from '../MovieList/MovieList';
 import { useDispatch } from 'react-redux';
-import addMovies from '../../features/movies/MovieSlice';
+import { addMovies } from '../../features/movies/MovieSlice';
 import movieAPI from '../../common/api/movieAPI';
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
         .catch(error => {
           console.log(error);
         });
-        console.log(response);
+      console.log(response.data);
       dispatch(addMovies(response.data));
     };
     fetchMovies();
