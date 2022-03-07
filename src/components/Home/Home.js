@@ -1,23 +1,18 @@
 import React, { useEffect } from 'react';
 import './Home.scss';
 import MovieList from '../MovieList/MovieList';
-import movieAPI from '../../common/api/movieAPI';
+import { searchShows } from '../../common/api/search';
+import { useDispatch } from 'react-redux';
+import addShow from '../../features/shows/ShowSlice';
 
 
 const Home = () => {
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchMovies();
-  });
-
-  const fetchMovies = async () => {
-    const showSearch = 'rick and morty';
-    const response = await movieAPI.get(`/search/shows?q=${showSearch}`);
-    const data = await response.data;
-    console.log(data);
-  };
-
-
+    searchShows();
+    dispatch(addShow.data);
+  }, []);
 
   return (
     <>
