@@ -1,0 +1,19 @@
+@import '../../common/colors.scss';
+
+.footer {
+  background-color: $secondary-color-dark;
+  padding: 40px 0;
+  color: $font-primary;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100vw;
+}
