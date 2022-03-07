@@ -1,0 +1,21 @@
+@import './common/colors.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $primary-color-dark;
+}
+
+.container {
+  // max-width: 1200px;
+  margin: 0 40px;
+}
