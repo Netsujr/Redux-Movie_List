@@ -1,15 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './MediaList.scss';
-import { getAllMovies } from '../../features/movies/MovieSlice';
-import { getAllSeries } from '../../features/movies/SeriesSlice';
+import { getAllMovies, getAllShows } from '../../features/movies/MovieSlice';
 import MovieCard from '../Movies/MovieCard/MovieCard';
-import SeriesCard from '../Series/SeriesCard';
 
 const MovieList = () => {
   const movies = useSelector(getAllMovies);
-  const series = useSelector(getAllSeries);
-  let [renderMovies, renderSeries] = null;
+  const shows = useSelector(getAllShows);
+  let [renderMovies, renderShows] = "";
 
   renderMovies = movies.Response === 'True' ? (
     movies.Search.map((movie, index) => (
@@ -24,29 +22,39 @@ const MovieList = () => {
     </div>
   );
 
-  renderSeries = series.Response === 'True' ? (
-    series.Search.map((show, index) => (
-      <SeriesCard
+  renderShows = shows.Response === 'True' ? (
+    shows.Search.map((show, index) => (
+      <MovieCard
         key={index}
         data={show}
       />
     ))
   ) : (
     <div className='series-error'>
-      <h3>{series.Error}</h3>
+      <h3>{shows.Error}</h3>
     </div>
   );
 
 
   return (
-    <div className='movie-wrapper'>
-      <div className="movie-list">
-        <h2>Movies</h2>
-        <div className="movie-container">
-          {renderMovies}
+    <>
+      <div className='movie-wrapper'>
+        <div className="movie-list">
+          <h2>Movies</h2>
+          <div className="movie-container">
+            {renderMovies}
+          </div>
         </div>
       </div>
-    </div>
+      <div className='movie-wrapper'>
+        <div className="movie-list">
+          <h2>Shows</h2>
+          <div className="movie-container">
+            {renderShows}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
