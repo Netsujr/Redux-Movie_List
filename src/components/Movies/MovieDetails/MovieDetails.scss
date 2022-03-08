@@ -1,0 +1,23 @@
+@import "../../../common/colors.scss";
+
+.movie-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+
+  span {
+    color: $font-primary;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border: 1px solid $font-primary;
+
+    h4 {
+      color: $font-secondary;
+    }
+  }
+}
+
+.movie-info {
+  border: 1px solid red;
+}
