@@ -3,10 +3,17 @@
 .card-item {
   background: $secondary-color;
   cursor: pointer;
+  transition: all .25s;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all .25s;
+
+  }
 }
 
 .card-inner {
-  height: fit-content;
+  min-height: fit-content;
 }
 
 .card-top {

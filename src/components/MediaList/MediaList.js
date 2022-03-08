@@ -47,7 +47,7 @@ const MovieList = () => {
         </div>
       </div>
       <div className='movie-wrapper'>
-        <div className="movie-list">
+        <div className="show-list">
           <h2>Shows</h2>
           <div className="movie-container">
             {renderShows}

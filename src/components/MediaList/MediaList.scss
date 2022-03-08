@@ -1,6 +1,6 @@
 @import '../../common/colors.scss';
 
-.movie-list, show-list {
+.movie-list, .show-list {
   margin: 20 0px;
 
   h2 {
@@ -9,6 +9,7 @@
     font-weight: 400;
   }
 }
+
 
 .movie-container {
   display: grid;
