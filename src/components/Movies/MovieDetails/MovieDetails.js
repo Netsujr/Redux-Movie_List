@@ -22,7 +22,7 @@ const MovieDetails = () => {
           <h1>{data.Title}</h1>
           <p>{data.Year}</p>
         </div>
-        <div className="movie-rating">
+        <div className="movie-info">
           <span>
             IMDB rating: <h4>{data.imdbRating} <i className="fas fa-star"></i></h4>
           </span>
