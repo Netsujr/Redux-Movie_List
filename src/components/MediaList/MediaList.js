@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import './MediaList.scss';
 import { getAllMovies, getAllShows } from '../../features/movies/MovieSlice';
 import MovieCard from '../Movies/MovieCard/MovieCard';
+import Slider from 'react-slick';
 
 const MovieList = () => {
   const movies = useSelector(getAllMovies);
