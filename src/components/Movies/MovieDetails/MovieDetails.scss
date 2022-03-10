@@ -4,7 +4,20 @@
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
+}
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  color: $font-primary;
+  flex: 1;
+}
+
+.movie-info-top {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .movie-info, .movie-plot {
@@ -33,8 +46,14 @@
 
 .movie-plot {
   span {
-    flex-direction: column;
-    margin-top: 20px;
+    margin: 20px 0;
+    text-align: justify;
+    min-width: 650px;
+
+    h4 {
+      margin-left: 0;
+    }
+    // border: 1px solid $font-primary;
   }
 }
 
@@ -42,7 +61,6 @@
   min-width: 600px;
   // border: 1px solid red;
   display: flex;
-  // justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: $font-secondary;
 }
