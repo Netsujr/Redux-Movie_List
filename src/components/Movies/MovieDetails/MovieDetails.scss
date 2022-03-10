@@ -5,19 +5,44 @@
   justify-content: space-evenly;
   padding: 10px;
 
+}
+
+.movie-info, .movie-plot {
+  // border: 1px solid red;
+  max-width: 45vw;
+  display: flex;
+  flex-direction: column;
+
   span {
     color: $font-primary;
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    border: 1px solid $font-primary;
+    // border: 1px solid $font-primary;
 
     h4 {
       color: $font-secondary;
+      display: flex;
+      margin-left: 10px;
+      i {
+        margin-left: 5px;
+      }
     }
   }
 }
 
-.movie-info {
-  border: 1px solid red;
+.movie-plot {
+  span {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+.movie-title {
+  min-width: 600px;
+  // border: 1px solid red;
+  display: flex;
+  // justify-content: space-between;
+  margin-bottom: 20px;
+  color: $font-secondary;
 }

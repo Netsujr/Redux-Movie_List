@@ -20,11 +20,11 @@ const MovieDetails = () => {
       <div className="section-left">
         <div className="movie-title">
           <h1>{data.Title}</h1>
-          <p>{data.Year}</p>
+          <p>({data.Year})</p>
         </div>
         <div className="movie-info">
           <span>
-            IMDB rating: <h4>{data.imdbRating} <i className="fas fa-star"></i></h4>
+            IMDB rating:<h4>{data.imdbRating} <i className="fas fa-star"></i></h4>
           </span>
           <span>
             Metascore: <h4>{data.Metascore} <i className="fas fa-star"></i></h4>
@@ -51,14 +51,12 @@ const MovieDetails = () => {
             Awards: <h4>{data.Awards}</h4>
           </span>
           <span>
-            Production: <h4>{data.Production}</h4>
-          </span>
-          <span>
             BoxOffice: <h4>{data.BoxOffice}</h4>
           </span>
           <div className='movie-plot'>
-            <h4>Plot:</h4>
-            <p>{data.Plot}</p>
+            <span>
+              Plot: <h4>{data.Plot}</h4>
+            </span>
           </div>
         </div>
       </div>
