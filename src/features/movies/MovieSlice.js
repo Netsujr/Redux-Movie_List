@@ -8,10 +8,9 @@ const initialState = {
 };
 
 export const fetchAsyncMovies = createAsyncThunk("movies/fetchAsyncMovies",
-  async () => {
-    const movieSearch = 'Harry';
+  async (term) => {
     const response = await movieAPI
-      .get(`?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&s=${movieSearch}&type=movie`)
+      .get(`?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&s=${term}&type=movie`)
       .catch(error => {
         console.log(error);
       });
@@ -20,10 +19,9 @@ export const fetchAsyncMovies = createAsyncThunk("movies/fetchAsyncMovies",
   });
 
 export const fetchAsyncShows = createAsyncThunk("movies/fetchAsyncShows",
-  async () => {
-    const seriesSearch = 'Friends';
+  async (term) => {
     const response = await movieAPI
-      .get(`?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&s=${seriesSearch}&type=series`)
+      .get(`?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&s=${term}&type=series`)
       .catch(error => {
         console.log(error);
       });

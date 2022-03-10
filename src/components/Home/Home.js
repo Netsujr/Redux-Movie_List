@@ -7,15 +7,22 @@ import { fetchAsyncMovies, fetchAsyncShows } from '../../features/movies/MovieSl
 const Home = () => {
   const [term, setTerm] = useState('');
   const dispatch = useDispatch();
+  const loadMovie = 'avengers';
+  const loadShow = 'breaking bad';
 
   useEffect(() => {
-    dispatch(fetchAsyncShows());
-    dispatch(fetchAsyncMovies());
+    dispatch(fetchAsyncMovies(loadMovie));
+    dispatch(fetchAsyncShows(loadShow));
+    setTerm('');
   }, [dispatch]);
 
   const submitHandler = (e) => {
+    if (term === '' || term === null || term === undefined ) {
+      return alert ('Please enter a movie or show');
+    }
     e.preventDefault();
     dispatch(fetchAsyncMovies(term));
+    dispatch(fetchAsyncShows(term));
   }
 
   return (
