@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Home.scss';
 import MediaList from '../MediaList/MediaList';
-import { useDispatch } from 'react-redux';
-import { fetchAsyncMovies, fetchAsyncShows } from '../../features/movies/MovieSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAsyncMovies, fetchAsyncShows, getAllMovies } from '../../features/movies/MovieSlice';
 
 const Home = () => {
   const [term, setTerm] = useState('');

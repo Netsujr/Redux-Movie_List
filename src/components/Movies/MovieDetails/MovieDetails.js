@@ -17,10 +17,6 @@ const MovieDetails = () => {
     }
   }, [dispatch, imdbID]);
 
-
-
-
-
   return (
     <div className='movie-section'>
       {Object.keys(data).length === 0 ?
