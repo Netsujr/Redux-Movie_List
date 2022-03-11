@@ -1,9 +1,9 @@
-export const settings = {
+export let settings = {
   dots: false,
-  infinite: true,
   speed: 500,
-  slidesToShow: 6,
-  slidesToScroll: 3,
+  infinite: false,
+  slidesToShow: 5,
+  slidesToScroll: 2,
   initialSlide: 0,
   responsive: [
     {
@@ -11,8 +11,8 @@ export const settings = {
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
-        infinite: true,
-        dots: false
+        infinite: false,
+        dots: false,
       }
     },
     {

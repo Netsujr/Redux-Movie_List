@@ -14,7 +14,7 @@ const MovieCard = (props) => {
           <div className='card-bottom'>
             <div className="card-info">
               <h3>{data.Title}</h3>
-              <p>{data.Year}</p>
+              <p>({data.Year})</p>
             </div>
           </div>
         </div>
