@@ -13,7 +13,6 @@ const MovieList = () => {
 
   // settings.infinite =  movies.length > 5 ? true : false;
 
-
   renderMovies = movies.Response === 'True' ? (
     movies.Search.map((movie, index) => (
       <MovieCard
