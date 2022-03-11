@@ -8,6 +8,8 @@ const MovieDetails = () => {
   const { imdbID } = useParams();
   const dispatch = useDispatch();
   const data = useSelector(getSelectedMovieOrShow);
+  const placeholderImg = 'https://icon-library.com/images/imdb-icon-png/imdb-icon-png-15.jpg';
+
   console.log(data);
 
   useEffect(() => {
@@ -20,7 +22,7 @@ const MovieDetails = () => {
   return (
     <div className='movie-section'>
       {Object.keys(data).length === 0 ?
-          <div className='loading'>Loading...</div>
+        <div className='loading'>Loading...</div>
         :
         <>
           <div className="section-left">
@@ -69,7 +71,7 @@ const MovieDetails = () => {
             </div>
           </div>
           <div className="section-right">
-            <img src={data.Poster} alt={data.Title} />
+            <img src={data.Poster === 'N/A' ? placeholderImg : data.Poster} alt={data.Title} />
           </div>
         </>
       }
