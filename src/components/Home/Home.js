@@ -8,7 +8,7 @@ const Home = () => {
   const [term, setTerm] = useState('');
   const dispatch = useDispatch();
   const loadMovie = 'avengers';
-  const loadShow = 'breaking bad';
+  const loadShow = 'dexter';
 
   useEffect(() => {
     dispatch(fetchAsyncMovies(loadMovie));
