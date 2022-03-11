@@ -17,8 +17,8 @@ const Home = () => {
   }, [dispatch]);
 
   const submitHandler = (e) => {
-    if (term === '' || term === null || term === undefined ) {
-      return alert ('Please enter a movie or show');
+    if (term === '' || term === null || term === undefined) {
+      return alert('Please enter a movie or show');
     }
     e.preventDefault();
     dispatch(fetchAsyncMovies(term));
@@ -27,17 +27,19 @@ const Home = () => {
 
   return (
     <>
-      <div className='search-bar'>
-        <form onSubmit={submitHandler}>
-          <input
-          type='text'
-          value={term}
-          onChange={(e) => setTerm(e.target.value)}
-          placeholder='Search for a movie or show' />
-          <button type='submit'> <i className='fa fa-search'></i></button>
-        </form>
+      <div className="home">
+        <div className='search-bar'>
+          <form onSubmit={submitHandler}>
+            <input
+              type='text'
+              value={term}
+              onChange={(e) => setTerm(e.target.value)}
+              placeholder='Search for a movie or show' />
+            <button type='submit'> <i className='fa fa-search'></i></button>
+          </form>
+        </div>
+        <MediaList />
       </div>
-      <MediaList />
     </>
   );
 };

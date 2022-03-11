@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
+  min-height: 100vh;
 }
 
 .loading {
@@ -69,7 +70,8 @@
 .section-right {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 40px;
 
   img {
     width: 250px;
